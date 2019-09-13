@@ -1,0 +1,52 @@
+
+// there is a lot of nesting going on here but I found it to be the most reliable way of targeting only the divs that we want to modify
+.wp-block-rawb-columns-block  {
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0.5rem;
+
+    & > div > div.editor-block-list__layout {
+        display: grid;
+        grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 1fr);
+        grid-column-gap: 14px;
+        margin-right: 0;
+        margin-left: 0;
+
+        & > div.wp-block {
+            margin-left: 0;
+            margin-right: 0;
+            padding-right: 0;
+            padding-left: 0;
+
+            & > div {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+// classes to make columns of appropriate width in editor
+.columns1-2_1-2 > div > div.editor-block-list__layout {
+    grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 1fr);
+}
+
+.columns1-3_2-3 > div > div.editor-block-list__layout {
+    grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 2fr);
+}
+
+.columns2-3_1-3 > div > div.editor-block-list__layout {
+    grid-template-columns: minmax(min-content, 2fr) minmax(min-content, 1fr);
+}
+
+.columns1-3_1-3_1-3 > div > div.editor-block-list__layout {
+    grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 1fr);
+}
+
+.columns1-4_1-2_1-4 > div > div.editor-block-list__layout {
+    grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 2fr) minmax(min-content, 1fr);
+}
+
+
