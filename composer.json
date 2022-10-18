@@ -1,0 +1,12 @@
+{
+    "name": "24hr/rawb-columns-block",
+    "description": "Part of the 24hr Gutenberg infrastructure",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+            "name": "Camilo Tapia",
+            "email": "camilo.tapia@24hr.se"
+        }
+    ],
+    "require": {}
+}
